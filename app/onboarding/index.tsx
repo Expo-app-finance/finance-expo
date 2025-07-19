@@ -1,4 +1,3 @@
-
 // File: app/onboarding/index.tsx
 import React from 'react';
 import { Image, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
@@ -30,12 +29,11 @@ export default function OnboardingScreen() {
 
   const finish = async () => {
     await AsyncStorage.setItem('seenOnboarding', 'true');
-    // router.replace('/auth/login');
+    router.replace('/auth/login');
   };
 
   return (
     <Onboarding
-      // Pass custom components
       NextButtonComponent={NextButton}
       DoneButtonComponent={DoneButton}
       DotComponent={Dot}
@@ -44,21 +42,21 @@ export default function OnboardingScreen() {
       pages={[
         {
           backgroundColor: '#10B981',
-          image: <Image source={require('../../assets/images/react-logo.png')} style={styles.image} />,
+          image: <View style={styles.iconContainer}><Text style={styles.iconText}>💰</Text></View>,
           title: 'Track Every Penny',
-          subtitle: 'Log your income & expenses in seconds.',
+          subtitle: 'Log your income & expenses in seconds with our intuitive interface.',
         },
         {
           backgroundColor: '#6366F1',
-          image: <Image source={require('../../assets/images/react-logo.png')} style={styles.image} />,
+          image: <View style={styles.iconContainer}><Text style={styles.iconText}>📊</Text></View>,
           title: 'Visualize Your Spending',
-          subtitle: 'See where your money goes with intuitive charts.',
+          subtitle: 'See where your money goes with beautiful charts and insights.',
         },
         {
           backgroundColor: '#FBBF24',
-          image: <Image source={require('../../assets/images/react-logo.png')} style={styles.image} />,
-          title: 'Automate Your Savings',
-          subtitle: 'Set goals & watch your savings grow—hands-free.',
+          image: <View style={styles.iconContainer}><Text style={styles.iconText}>🎯</Text></View>,
+          title: 'Achieve Your Goals',
+          subtitle: 'Set financial goals and watch your savings grow automatically.',
         },
       ]}
       bottomBarHighlight={true}
@@ -68,10 +66,17 @@ export default function OnboardingScreen() {
 }
 
 const styles = StyleSheet.create({
-  image: {
+  iconContainer: {
     width: 180,
     height: 180,
+    borderRadius: 90,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginBottom: 40,
+  },
+  iconText: {
+    fontSize: 80,
   },
   button: {
     paddingHorizontal: 20,
