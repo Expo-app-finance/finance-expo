@@ -27,18 +27,18 @@ const Dot = ({selected}: {selected: boolean}) => (
 export default function OnboardingScreen() {
   const router = useRouter();
 
-  const finish = async () => {
-    await AsyncStorage.setItem('seenOnboarding', 'true');
-    router.replace('/auth/login');
-  };
+  // const finish = async () => {
+  //   await AsyncStorage.setItem('seenOnboarding', 'true');
+  //   router.replace('/auth/login');
+  // };
 
   return (
     <Onboarding
       NextButtonComponent={NextButton}
       DoneButtonComponent={DoneButton}
       DotComponent={Dot}
-      onSkip={finish}
-      onDone={finish}
+      // onSkip={finish}
+      // onDone={finish}
       pages={[
         {
           backgroundColor: '#10B981',
