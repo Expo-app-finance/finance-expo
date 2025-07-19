@@ -35,6 +35,7 @@ export default function OnboardingScreen() {
 
   return (
     <Onboarding
+      // Pass custom components
       NextButtonComponent={NextButton}
       DoneButtonComponent={DoneButton}
       DotComponent={Dot}
@@ -60,8 +61,44 @@ export default function OnboardingScreen() {
           subtitle: 'Set goals & watch your savings grow—hands-free.',
         },
       ]}
-      bottomBarHighlight
+      bottomBarHighlight={true}
       controlStatusBar={false}
     />
   );
 }
+
+const styles = StyleSheet.create({
+  image: {
+    width: 180,
+    height: 180,
+    marginBottom: 40,
+  },
+  button: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderRadius: 25,
+  },
+  buttonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#000',
+  },
+  doneButton: {
+    backgroundColor: '#fff',
+  },
+  doneText: {
+    color: '#333',
+  },
+  dot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginHorizontal: 3,
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+  },
+  dotSelected: {
+    backgroundColor: '#fff',
+    width: 16,
+  },
+});

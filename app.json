@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "finance",
-    "slug": "finance",
+    "slug": "finance-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2e6c424d-7d20-427f-9e78-97629450511b"
+      }
+    },
+    "owner": "canadaharsh"
   }
 }
