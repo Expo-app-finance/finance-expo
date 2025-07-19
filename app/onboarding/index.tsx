@@ -30,7 +30,7 @@ export default function OnboardingScreen() {
 
   const finish = async () => {
     await AsyncStorage.setItem('seenOnboarding', 'true');
-    router.replace('/auth/login');
+    // router.replace('/auth/login');
   };
 
   return (
@@ -44,19 +44,19 @@ export default function OnboardingScreen() {
       pages={[
         {
           backgroundColor: '#10B981',
-          image: <Image source={require('../../assets/images/wallet.png')} style={styles.image} />,
+          image: <Image source={require('../../assets/images/react-logo.png')} style={styles.image} />,
           title: 'Track Every Penny',
           subtitle: 'Log your income & expenses in seconds.',
         },
         {
           backgroundColor: '#6366F1',
-          image: <Image source={require('../../assets/images/chart.png')} style={styles.image} />,
+          image: <Image source={require('../../assets/images/react-logo.png')} style={styles.image} />,
           title: 'Visualize Your Spending',
           subtitle: 'See where your money goes with intuitive charts.',
         },
         {
           backgroundColor: '#FBBF24',
-          image: <Image source={require('../../assets/images/savings.png')} style={styles.image} />,
+          image: <Image source={require('../../assets/images/react-logo.png')} style={styles.image} />,
           title: 'Automate Your Savings',
           subtitle: 'Set goals & watch your savings grow—hands-free.',
         },
